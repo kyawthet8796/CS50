@@ -181,3 +181,89 @@ The bit `1` to represent black and `0` for white, we can create an image with a 
 The first three bytes of a JPEG file are `0xff 0xd8 0xff`.
 `0xff` is 255.
 `0xd8` is 216.
+
+**Lecture 5**
+
+*Memory*
+
+ 1.  Text
+   - The text area contains the binary code of our compiled program.
+ 2. Initialized and uninitialized data
+   - refers to global variables for our program, depending on whether we’ve set initial values for them.
+3. Heap
+  - The heap has dynamically allocated memory, or memory allocated when the program is running.
+4. Stack
+  - The stack contains slices, or frames, of memory for functions and their local variables.
+5. Environment variables
+  - Environment variables, which we’ll see in web programming, are variables like usernames and passwords that we don’t want to store in the source code of our program, but still want access to via different mechanisms.
+
+*Overflow*
+
+ - StackOverflow
+ - Heap overflow
+ - Buffer overflow
+
+*Stacks and Queues*
+
+- Stacks(push & pop) or LIFO(Last In First Out)/FILO(First In Last Out) order
+- Queue(enqueue & dequeue) or FIFO(First In First Out)
+
+**Lecture 6**
+
+*HTTP*
+Websites are generally written not as binary, but in markup language.
+
+ -   `GET` is a method that specifies we want to retrieve something.
+    
+ -   The `/` refers to the default page, or the homepage.
+    
+ -   `HTTP/1.1` indicates the the version of HTTP we want to use.
+ -  `Host: www.facebook.com` indicates the website we want the server to return to us, since that same server might have many websites it is responsible for.
+
+
+ -   200 OK
+    
+ -   301 Moved Permanently
+    
+ -   302 Found
+    
+ -   304 Not Modified
+    
+ -   401 Unauthorized
+    
+ -   403 Forbidden
+    
+    -   The requesting client doesn’t have the permissions to access a particular page.
+        
+    
+ -   404 Not Found
+    
+ -   418 I’m a Teapot
+    
+    -   Actually an April Fool’s joke that stuck around.
+        
+    
+ -   500 Internal Server Error
+    
+    -   The code on the web server itself had an error.
+
+*Private Addresses*
+- 10.#.#.#
+- 172.16.#.# - 172.31.#.#
+- 192.168.#.#
+
+DHCP - automatically acquire an IP address from a DHCP server.
+
+DNS, Domain Name System, that maps IP addresses to domain names, and vice versa.
+
+Standard ports and protocols include:
+
+-   22 SSH, secure shell, to run commands on another computer
+    
+-   53 DNS
+    
+-   80 HTTP, for visiting websites
+    
+-   443 HTTPS, for visiting secure websites
+    
+-   587 SMTP, for sending mail …
