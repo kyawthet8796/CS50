@@ -267,3 +267,125 @@ Standard ports and protocols include:
 -   443 HTTPS, for visiting secure websites
     
 -   587 SMTP, for sending mail …
+
+**Lecture 7**
+
+*Dynamic Programming*
+- is a type of algorithm that solves a problem by saving the results each time, and looking up the answer if it’s needed in the future.
+
+*Rod Cutting*
+There are different ways we can cut a rod of length 10, and we see that the total amount we can get is different depending on how we cut it.There are 2^_n_ - 1^ possibilties for a rod of length _n_.
+
+*Network Routing*
+Our own computers only go so far as to know about our local network and our access point, and only our ISP or school’s servers will participate in this route sharing process.
+
+**Lecture 8**
+
+*Python*
+Python is interpreted. This means that we can run our program with one command like `python hello.py`.`Python` program is an interpreter that compiles our source code into something called bytecode. 
+
+-   Python has familiar data types and features:
+    
+    -   `bool`
+        
+    -   `float`
+        
+    -   `int`
+        
+    -   `str`
+        
+    -   `…​`
+-   We’ve also implemented some training wheels again, with functions in a library that we’ll call like this:
+    
+    -   `get_char`
+        
+    -   `get_float`
+        
+    -   `get_int`
+        
+    -   `get_string`
+        
+    -   …​
+        
+    
+-   And there are even more types and features built into Python, like:
+    
+    -   `complex`
+        
+        -   complex numbers from mathematics
+            
+        
+    -   `dict`
+        
+        -   a dictionary, like a hash table
+            
+        
+    -   `list`
+        
+        -   like an array that automatically grows and shrinks
+            
+        
+    -   `range`
+        
+    -   `set`
+        
+        -   a list with unique items, with operations like those of sets in mathematics
+            
+        
+    -   `tuple`
+        
+        -   like structs, but without any specifications, like `(x, y)` to store two numbers
+            
+        
+    -   …​
+
+`//`, that divides two integers and returns an integer.
+`/` symbol will divide two integers into a float if needed.
+Comments in Python, will start with `#`.
+`or` and `and` in Python instead of `||` and `&&`.
+Python also doesn’t have a `do while` loop, so instead we use `while True`, and `break`, or stop the loop, `if n > 0`.
+Python maximum for an integer is far larger than the maximum it is in C.
+
+**Lecture 9**
+
+*Web Programming*
+To get data back from a server
+```
+GET / HTTP/1.1
+Host: www.facebook.com
+...
+```
+The server responds with a message
+```
+HTTP/1.1 200 OK
+Content-Type: text/html
+...
+```
+Python is a programming language that can be used for many purposes, but today we’ll use it to write a program that acts as web server, generating dynamic content.
+
+**Lecture 10**
+
+*Cookies*
+A **cookie** (in this context) is a small piece of information unique to our login that a web server gives to our browser, that our browser can send back in the future, to verify who we are.Like a digital handstamp.
+Our browser stores cookies for us and sends it back as part of an HTTP request in the headers.
+
+Some of the headers in the reply from the server might look like this:
+
+```
+HTTP/1.1 200 OK
+Content-Type: text/html
+Set-Cookie: session=value
+...
+```
+
+-   `session` is the key for the cookie, like a variable name, and `value` will be our unique handstamp, which might be a large random number that’s hard for others to guess.
+
+Our browser, in future requests, will include that cookie in the headers:
+
+```
+GET / HTTP/1.1
+Host: www.facebook.com
+Cookie: session=value
+...
+```
+HTTPS encrypts the messages between our browser and the receiving server, so someone along the network won’t be able to steal our cookies.
