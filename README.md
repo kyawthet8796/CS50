@@ -389,3 +389,42 @@ Cookie: session=value
 ...
 ```
 HTTPS encrypts the messages between our browser and the receiving server, so someone along the network won’t be able to steal our cookies.
+
+*Databases*
+
+SQL, Structured Query Language, is a programming language that we use to talk to a database, a program that stores data and responds to requests for data, like a web server. And it has advanced features like searching and filtering data quickly.
+-   In SQL, we’ll use a few basic operations:
+    
+    -   `CREATE …​`
+        
+    -   `INSERT …​`
+        
+    -   `SELECT …​`
+        
+    -   `UPDATE …​`
+        
+    -   `DELETE …​`
+        
+    -   `…​`
+
+`CREATE TABLE 'registrants' ('id' INTEGER PRIMARY KEY, 'name' TEXT, 'dorm' TEXT)`
+
+`INSERT INTO "registrants" ("id", "name", "dorm") VALUES(1, 'David', 'Matthews')`
+
+`SELECT * FROM "registrants"`
+
+`UPDATE "registrants" SET "name" = 'David Malan' where id = 1`
+
+`DELETE FROM "registrants" WHERE id = 1`
+
+-   `PRIMARY KEY`, where this column will be used to uniquely identify rows.
+    
+-   `UNIQUE` means that the field will be unique for every row, but not used to identify rows in joins.
+    
+-   `INDEX` means that we want the database to store the field in some index to speed up searches in the future, if we anticipate searching on that field frequently.
+    
+-   `NOT NULL` means that the field has to have some value, and can’t be blank.
+    
+-   `FOREIGN KEY` we’ll come back to again later, but means that it is referring to a row in some other table.
+
+
